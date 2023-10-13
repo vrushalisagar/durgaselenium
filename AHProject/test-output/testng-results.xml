@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="5" total="7" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-13T16:06:57Z" name="Suite" finished-at="2023-10-13T16:07:17Z" duration-ms="20466">
+    <groups>
+    </groups>
+    <test started-at="2023-10-13T16:06:57Z" name="Test" finished-at="2023-10-13T16:07:17Z" duration-ms="20466">
+      <class name="testcases.session">
+        <test-method is-config="true" signature="BeforeTest(org.testng.ITestContext)[pri:0, instance:testcases.session@68567e20]" started-at="2023-10-13T16:06:57Z" name="BeforeTest" finished-at="2023-10-13T16:06:57Z" duration-ms="603" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5f14761c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTest -->
+        <test-method is-config="true" signature="BeforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.session@68567e20]" started-at="2023-10-13T16:06:57Z" name="BeforeMethod" finished-at="2023-10-13T16:06:57Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5f14761c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="dologin()[pri:0, instance:testcases.session@68567e20]" started-at="2023-10-13T16:06:57Z" name="dologin" finished-at="2023-10-13T16:07:17Z" duration-ms="19461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dologin -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.session@68567e20]" started-at="2023-10-13T16:07:17Z" name="quit" finished-at="2023-10-13T16:07:17Z" duration-ms="370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- testcases.session -->
+      <class name="testcases.portifolioManagement">
+        <test-method is-config="true" signature="BeforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.portifolioManagement@11fc564b]" started-at="2023-10-13T16:07:17Z" name="BeforeMethod" finished-at="2023-10-13T16:07:17Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5f14761c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="createportifolio()[pri:0, instance:testcases.portifolioManagement@11fc564b]" started-at="2023-10-13T16:07:17Z" name="createportifolio" finished-at="2023-10-13T16:07:17Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createportifolio -->
+      </class> <!-- testcases.portifolioManagement -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
