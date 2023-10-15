@@ -4,6 +4,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -16,6 +17,7 @@ public class BaseTest
 	public  Application app; // object creating coz we have to use all keyword classes
 	public static ExtentReports rep;
 	public static ExtentTest test;
+	
 	
   @BeforeTest
   public void BeforeTest(ITestContext context) throws Exception  

@@ -17,8 +17,13 @@ public class session  extends BaseTest
 	  app.Navigate("rediffurl");
 	  app.Click("signin_linktext");
 	  app.Type("useremail_id", "rediffuser");
+	  
+	  app.reportfailure("test is incorrect");
+	  
 	  app.Type("userpassword_id","rediffpassword");
 	  app.Click("submit_id");
+	  app.assertall();
+	  
 	 // app.OpenBrowser("chromebrowser");
 	//  app.Navigate("rediffurl");
 	//  app.Click("signin_linktext");

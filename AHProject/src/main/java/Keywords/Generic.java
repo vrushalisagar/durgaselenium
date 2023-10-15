@@ -1,20 +1,28 @@
 package Keywords;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Date;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import reportings.ExtentManager;
 
 public class Generic 
   {
@@ -25,6 +33,7 @@ public class Generic
       public Properties childprop;
       public Properties orprop;
       public ExtentTest test;
+      public SoftAssert softAssert;
       
 	
 	public void OpenBrowser(String Browsername)
@@ -148,4 +157,47 @@ public class Generic
 	}
 	
 
-}
+	//reportingsfailure
+		public void Reportfailure(String failuremsg)
+		{
+			softAssert.fail(failuremsg);                //failure in test ng report
+			test.log(Status.FAIL, failuremsg);         // failure in extent report
+			takescreenshot();
+		}
+		
+		public void Softassert()
+		{
+			softAssert.assertAll();
+		}
+		
+		 public void takescreenshot()
+	     {
+	    	 //filename of the screenshot
+	    	 Date d = new Date();
+	    	String screenshotfile= d.toString().replace(":", "_").replace(" ", "_ ")+".png";
+	    	//take screenshot
+	    	File srcfile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	    	
+	    	
+	    	try {
+	    		//get the dynamic folder name
+	    		
+				FileUtils.copyFile(srcfile, new File (ExtentManager.Screenshotfolderpath+"//"+screenshotfile));
+				
+				//put screenshotfile in report mns attaching screenshot to the extent report
+		    	test.log(Status.INFO, "screenshot->"+test.addScreenCaptureFromPath(ExtentManager.Screenshotfolderpath+"//"+screenshotfile));
+		    	 
+				
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	
+	    	
+	     }
+			
+			
+			
+		}
+

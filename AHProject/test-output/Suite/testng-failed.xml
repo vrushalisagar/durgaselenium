@@ -11,6 +11,14 @@
           <include name="dologin"/>
         </methods>
       </class> <!-- testcases.session -->
+      <class name="testcases.portifolioManagement">
+        <methods>
+          <include name="createportifolio"/>
+          <include name="BeforeMethod"/>
+          <include name="BeforeTest"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- testcases.portifolioManagement -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

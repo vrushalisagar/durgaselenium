@@ -5,6 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.testng.asserts.SoftAssert;
+
+import com.aventstack.extentreports.Status;
+
 public class Application extends Validation
 {
 
@@ -32,6 +36,7 @@ public class Application extends Validation
 			
 			e.printStackTrace();
 		}
+		softAssert = new SoftAssert();
 				
 	}
 	public void Login()
@@ -40,6 +45,17 @@ public class Application extends Validation
 	}
 	public void SelectDateFormCalander()
 	{
+		
+	}
+	public void reportfailure(String failuremsg) 
+	{
+		softAssert.fail(failuremsg);
+		test.log(Status.FAIL, failuremsg);
+		
+	}
+	public void assertall() 
+	{
+		softAssert.assertAll();
 		
 	}
 
